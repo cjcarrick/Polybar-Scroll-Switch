@@ -33,7 +33,8 @@ if [ ! -z $1 ]; then
         echo "Current bar: $runningBar (index: $runningBarIndex)"
 
         # remove the bar that's already there
-        pkill -f "polybar -c ~/.config/polybar/config $runningBar"
+        pkill -f "polybar -c /home/< *******YOUR HOME DIR HERE******* >/.config/polybar/config $runningBar"
+        # (this should be the path to your polybar config file)
 
         targetIndex=$runningBarIndex
 
@@ -42,7 +43,7 @@ if [ ! -z $1 ]; then
             let targetIndex--
 
             # if targetIndex is already at index 0, rollover to the highest possible index
-            if [ targetIndex -lt 0 ]; then
+            if [ $targetIndex -lt 0 ]; then
 
                 targetIndex=${#targets[@]}
 
