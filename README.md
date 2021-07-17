@@ -25,6 +25,8 @@ scroll-down = ~/.config/polybar/switchWallpaper.sh next
 ### Switch Bars
 This lets you switch through different bars you have. Useful if there's a lot of stuff you want to show but it won't all fit on one bar. It's actually a special `launch.sh` file that does all the work here, with the names of all your bars in an array at the top of the script.
 
+IMPORTANT: If you're going to use this, go to line 36 of `launch.sh` and put in your home directory.
+
 Module:
 ```
 [module/switchBar]
